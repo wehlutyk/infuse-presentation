@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Presentation of Infuse, a project to process all exsting research into structured data, making scientific knowledge readable as a wiki",
   "scripts": {
-    "serve": "autoreload-server -w '**/**.{html,css}'"
+    "serve": "autoreload-server -w '**/**.{html,css,svg}'"
   },
   "author": "Sébastien Lerique",
   "license": "GPLv3",
