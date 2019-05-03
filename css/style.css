@@ -9,6 +9,16 @@ h1, h2, h3, h4, h5 {
 h1 { font-size: 48px }
 h2 { font-size: 36px }
 h3 { font-size: 24px }
+p, ul, li, table { font-size: 24px }
+ol, ul {
+    list-style: none;
+    text-align: left;
+}
+blockquote, q {
+    font-size: 24px;
+    font-style: italic;
+}
+blockquote { text-align: left }
 
 /*
     Steps
@@ -30,6 +40,7 @@ h3 { font-size: 24px }
     transition: opacity 1s;
 }
 .impress-enabled .step.active { opacity: 1 }
+.impress-on-overview .step { opacity: 0.8 }
 
 /*
     Individual slides
@@ -44,14 +55,124 @@ h3 { font-size: 24px }
     z-index: -1;
 }
 .circle h1 { margin: auto }
+
 #start {
     transition: opacity 0.2s;
     opacity: 0;
 }
 #start.present { opacity: 1 }
+
+#screencasts div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+#screencasts div p { margin-right: 20px }
+#screencasts div div { flex-grow: 1 }
+#screencasts div video {
+    flex-grow: 5;
+    max-width: 650px;
+}
+#screencasts div:nth-child(2) {
+    opacity: 0;
+    transition: opacity 1s;
+}
+#screencasts.active div:nth-child(2) {
+    opacity: 1;
+    transition-delay: 10s;
+}
+#screencasts.past div:nth-child(2) { opacity: 1 }
+
+#silos .grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+#silos .grid div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#silos .grid div div {
+    margin: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+#silos .grid img:first-child {
+    margin: 5px;
+    max-height: 20%;
+}
+#silos .grid img, #silos .grid video { max-width: 100% }
+
+#annotations div:first-child {
+    display: flex;
+    margin: auto;
+}
+#annotations div:first-child div { flex-grow: 2 }
+#annotations div:first-child img {
+    max-width: 40%;
+    margin-right: 20px;
+}
+#annotations div:nth-child(2) video { width: 80% }
+#annotations div:nth-child(2) > p {
+    text-align: right;
+    width: 85%
+}
+
+#search div { display: flex }
+#search img { width: 70% }
+#search li { margin-bottom: 20px }
+
+#initiatives img {
+    vertical-align: middle;
+    height: 30px;
+    margin: 0 5px;
+}
+#initiatives img.large { height: 50px }
+#initiatives img.x-large { height: 60px }
+#initiatives li {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+#initiatives ul { margin-left: 110px }
+
+#enclosure > div {
+    display: flex;
+}
+#enclosure p { text-align: left }
+#enclosure blockquote, #enclosure table { font-size: 20px }
+#enclosure td:first-child, #enclosure th:first-child { text-align: left }
+#enclosure td { text-align: right }
+#enclosure th, #enclosure td { padding: 1px 15px }
+#enclosure-costs {
+    opacity: 0;
+    transition: opacity 1s;
+}
+.active #enclosure-costs {
+    opacity: 1;
+    transition-delay: 5s;
+}
+.past #enclosure-costs { opacity: 1 }
+
+#cross-community p { text-align: left }
+#cross-community div { display: flex }
+#cross-community div div { flex-grow: 1 }
+#cross-community img {
+    margin: 0 20px;
+    width: 35%;
+}
+
+#incentives div {
+    width: 100%;
+    height: 500px;
+    background: url("/img/incentives.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 #monster {
-    height: 1600px;
-    width: 1500px;
+    height: 900px;
+    width: 900px;
     position: relative;
     z-index: -2;
     pointer-events: none;
@@ -70,8 +191,52 @@ h3 { font-size: 24px }
     opacity: 0;
     transition: opacity 3s;
 }
-#monster.present::before { opacity: 0.2 }
-#overview { display: none }
+#monster.present::before { opacity: 0.5 }
+
+#infuse div {
+    margin: 0 auto;
+    width: 80%;
+}
+#infuse p { text-align: left }
+#infuse img {
+    vertical-align: middle;
+    height: 30px;
+    margin: 0 5px;
+    border-radius: 3px;
+}
+#infuse h3 { margin-top: 75px }
+
+#pdf-processing h3 { text-align: left }
+#pdf-processing img {
+    vertical-align: middle;
+    height: 30px;
+    margin: 0 5px;
+}
+#pdf-processing ul { border-left: 1px solid darkmagenta }
+
+#goals div {
+    margin: 0 auto;
+    width: 70%;
+}
+#goals p { text-align: left }
+#goals ul { border-left: 1px solid darkmagenta }
+
+#overview {
+    pointer-events: none;
+    opacity: 0.2;
+}
+#overview::before {
+    position: absolute;
+    top: -235px;
+    left: 420px;
+    content: "";
+    width: 505px;
+    height: 140px;
+    border-radius: 100px;
+    background: #ff8700;
+    opacity: 0.3;
+    z-index: -1;
+}
 
 
 /*
