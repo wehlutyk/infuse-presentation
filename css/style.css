@@ -281,15 +281,15 @@ body.impress-mouse-timeout { cursor: none }
 
 @font-face {
     font-family: "Open Sans";
-    src: url("/fonts/OpenSans-Regular.ttf"),
-         url("/fonts/OpenSans-Italic.ttf"),
-         url("/fonts/OpenSans-SemiBold.ttf"),
-         url("/fonts/OpenSans-SemiBoldItalic.ttf");
+    src: url("../fonts/OpenSans-Regular.ttf"),
+         url("../fonts/OpenSans-Italic.ttf"),
+         url("../fonts/OpenSans-SemiBold.ttf"),
+         url("../fonts/OpenSans-SemiBoldItalic.ttf");
 }
 @font-face {
     font-family: "Montserrat";
-    src: url("/fonts/Montserrat-Regular.ttf"),
-         url("/fonts/Montserrat-Italic.ttf"),
-         url("/fonts/Montserrat-Bold.ttf"),
-         url("/fonts/Montserrat-BoldItalic.ttf");
+    src: url("../fonts/Montserrat-Regular.ttf"),
+         url("../fonts/Montserrat-Italic.ttf"),
+         url("../fonts/Montserrat-Bold.ttf"),
+         url("../fonts/Montserrat-BoldItalic.ttf");
 }
